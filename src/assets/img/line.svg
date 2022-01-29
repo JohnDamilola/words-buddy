@@ -1,0 +1,43 @@
+<svg height="942" viewBox="0 0 1438 942" width="1438" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<circle id="a" cx="595.694" cy="357.417" r="119.139"/>
+<mask id="b" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#a"/></mask><circle id="c" cx="595.694" cy="119.139" r="119.139"/>
+<mask id="d" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#c"/>
+</mask>
+<circle id="e" cx="357.417" cy="357.417" r="119.139"/>
+<mask id="f" fill="#fff" height="238.278" width="238.278" x="0" y="0"
+><use xlink:href="#e"/>
+</mask>
+<circle id="g" cx="357.417" cy="119.139" r="119.139"/>
+<mask id="h" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#g"/></mask><circle id="i" cx="1072.25" cy="357.417" r="119.139"/>
+<mask id="j" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#i"/>
+</mask>
+<circle id="k" cx="1072.25" cy="119.139" r="119.139"/>
+<mask id="l" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#k"/>
+</mask>
+<circle id="m" cx="595.694" cy="833.972" r="119.139"/>
+<mask id="n" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#m"/>
+</mask><circle id="o" cx="357.417" cy="833.972" r="119.139"/>
+<mask id="p" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#o"/></mask><circle id="q" cx="1072.25" cy="833.972" r="119.139"/>
+<mask id="r" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#q"/></mask><circle id="s" cx="833.972" cy="357.417" r="119.139"/>
+<mask id="t" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#s"/>
+</mask>
+<circle id="u" cx="833.972" cy="119.139" r="119.139"/>
+<mask id="v" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#u"/></mask><circle id="w" cx="1310.528" cy="357.417" r="119.139"/>
+<mask id="x" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#w"/></mask><circle id="y" cx="1548.805" cy="357.417" r="119.139"/>
+<mask id="z" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#y"/></mask><circle id="A" cx="1310.528" cy="119.139" r="119.139"/>
+<mask id="B" fill="#fff" height="238.278" width="238.278" x="0" y="0">
+<use xlink:href="#A"/></mask><circle id="C" cx="1548.805" cy="119.139" r="119.139"/><mask id="D" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#C"/></mask><circle id="E" cx="833.972" cy="833.972" r="119.139"/><mask id="F" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#E"/></mask><circle id="G" cx="1310.528" cy="833.972" r="119.139"/><mask id="H" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#G"/></mask><circle id="I" cx="1548.805" cy="833.972" r="119.139"/><mask id="J" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#I"/></mask><circle id="K" cx="595.694" cy="595.694" r="119.139"/><mask id="L" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#K"/></mask><circle id="M" cx="357.417" cy="595.694" r="119.139"/><mask id="N" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#M"/></mask><circle id="O" cx="1072.25" cy="595.694" r="119.139"/><mask id="P" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#O"/></mask><circle id="Q" cx="595.694" cy="1072.25" r="119.139"/><mask id="R" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#Q"/></mask><circle id="S" cx="357.417" cy="1072.25" r="119.139"/><mask id="T" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#S"/></mask><circle id="U" cx="1072.25" cy="1072.25" r="119.139"/><mask id="V" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#U"/></mask><circle id="W" cx="833.972" cy="595.694" r="119.139"/><mask id="X" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#W"/></mask><circle id="Y" cx="1310.528" cy="595.694" r="119.139"/><mask id="Z" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#Y"/></mask><circle id="aa" cx="1548.805" cy="595.694" r="119.139"/><mask id="ab" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#aa"/></mask><circle id="ac" cx="833.972" cy="1072.25" r="119.139"/><mask id="ad" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#ac"/></mask><circle id="ae" cx="1310.528" cy="1072.25" r="119.139"/><mask id="af" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#ae"/></mask><circle id="ag" cx="1548.805" cy="1072.25" r="119.139"/><mask id="ah" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#ag"/></mask><circle id="ai" cx="119.139" cy="357.417" r="119.139"/><mask id="aj" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#ai"/></mask><circle id="ak" cx="119.139" cy="119.139" r="119.139"/><mask id="al" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#ak"/></mask><circle id="am" cx="119.139" cy="833.972" r="119.139"/><mask id="an" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#am"/></mask><circle id="ao" cx="119.139" cy="595.694" r="119.139"/><mask id="ap" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#ao"/></mask><circle id="aq" cx="119.139" cy="1072.25" r="119.139"/><mask id="ar" fill="#fff" height="238.278" width="238.278" x="0" y="0"><use xlink:href="#aq"/></mask><mask id="as" fill="#fff"><path d="m.823 0h1437v941.75h-1437z" fill="#fff" fill-rule="evenodd"/></mask></defs><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-dasharray="0 0" stroke-opacity=".05"><path d="m-714.557 708.489h1429.431" mask="url(#as)" stroke-width="2.093" transform="matrix(0 -1 1 0 -708.331 708.649)"/><g mask="url(#as)"><g stroke-width="2.093"><path d="m-363.478 714.768h1429.431" transform="matrix(0 -1 1 0 -470.847 1059.727)"/><path d="m75.365 948.045h1579.001" transform="matrix(-1 0 0 -1 1622.413 1889.315)"/><path d="m31.392 239.074h1579.001" transform="matrix(-1 0 0 -1 1534.467 471.371)"/><path d="m31.392 7.074h1579.001" transform="matrix(-1 0 0 -1 1534.467 7.371)"/><path d="m0 475.924 1675.269-.001" transform="matrix(-1 0 0 -1 1567.951 945.751)"/><path d="m19.881 713.819h1613.532" transform="matrix(-1 0 0 -1 1545.977 1422.223)"/><path d="m-125.25 714.768h1429.431" transform="matrix(0 -1 1 0 -232.619 1297.955)"/><path d="m112.978 714.768h1429.431" transform="matrix(0 -1 1 0 5.609 1536.183)"/><path d="m351.206 714.768h1429.431" transform="matrix(0 -1 1 0 243.837 1774.411)"/><path d="m589.434 714.768h1429.431" transform="matrix(0 -1 1 0 482.065 2012.639)"/><path d="m827.296 723.563 1435.261.998" transform="matrix(0 -1 1 0 713.939 2263.057)"/></g><g stroke-width="4.186" transform="translate(-113.595 -125.567)"><use mask="url(#b)" xlink:href="#a"/><use mask="url(#d)" xlink:href="#c"/><use mask="url(#f)" xlink:href="#e"/><use mask="url(#h)" xlink:href="#g"/><use mask="url(#j)" xlink:href="#i"/><use mask="url(#l)" xlink:href="#k"/><use mask="url(#n)" xlink:href="#m"/><use mask="url(#p)" xlink:href="#o"/><use mask="url(#r)" xlink:href="#q"/><use mask="url(#t)" xlink:href="#s"/><use mask="url(#v)" xlink:href="#u"/><use mask="url(#x)" xlink:href="#w"/><use mask="url(#z)" xlink:href="#y"/><use mask="url(#B)" xlink:href="#A"/><use mask="url(#D)" xlink:href="#C"/><use mask="url(#F)" xlink:href="#E"/><use mask="url(#H)" xlink:href="#G"/><use mask="url(#J)" xlink:href="#I"/><use mask="url(#L)" xlink:href="#K"/><use mask="url(#N)" xlink:href="#M"/><use mask="url(#P)" xlink:href="#O"/><use mask="url(#R)" xlink:href="#Q"/><use mask="url(#T)" xlink:href="#S"/><use mask="url(#V)" xlink:href="#U"/><use mask="url(#X)" xlink:href="#W"/><use mask="url(#Z)" xlink:href="#Y"/><use mask="url(#ab)" xlink:href="#aa"/><use mask="url(#ad)" xlink:href="#ac"/><use mask="url(#af)" xlink:href="#ae"/><use mask="url(#ah)" xlink:href="#ag"/><use mask="url(#aj)" xlink:href="#ai"/><use mask="url(#al)" xlink:href="#ak"/><use mask="url(#an)" xlink:href="#am"/><use mask="url(#ap)" xlink:href="#ao"/>
+<use mask="url(#ar)" xlink:href="#aq"/></g></g></g></svg>

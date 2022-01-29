@@ -8,7 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 import { ToastProvider } from "react-toast-notifications";
 import {firebaseConfig} from "./utils/firebase";
 
-firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>

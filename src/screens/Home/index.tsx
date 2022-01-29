@@ -4,13 +4,13 @@ import { useLocation, useHistory } from "react-router";
 import { searchWords } from "../../apis/search";
 import { HomeWrapper } from "./styles";
 import Loader from "../../components/Loader";
-import WordItemCard from "../../components/WordItemCard";
-import CreatableSelect from "react-select/creatable";
 import _ from "lodash";
 import Logo from "../../assets/img/SearchCo.png";
 import Div100vh from "react-div-100vh";
-import Masonry from "react-masonry-css";
 import { firebaseAnalytics } from "../../utils/firebase";
+import Search from "../../components/Search";
+import WordList from "../../containers/WordList";
+import GameList from "../../containers/GameList";
 
 const useQueryLocation = () => {
   return new URLSearchParams(useLocation().search);
@@ -20,7 +20,7 @@ const Home = (props: any) => {
   const history = useHistory();
   const query = useQueryLocation();
   const recordsToTake = 10;
-  const [mode, setMode] = useState("results");
+  const [mode, setMode] = useState("menu");
   const [inputValue, setInputValue] = useState("");
   const [value, setValue] = useState<any[]>([]);
   const searchQuery = query.get("q");
@@ -29,7 +29,7 @@ const Home = (props: any) => {
 
   useEffect(() => {
     firebaseAnalytics.logEvent("homepage_visited");
-  }, [])
+  }, []);
 
   const {
     data,
@@ -40,7 +40,7 @@ const Home = (props: any) => {
     isFetchingNextPage,
   } = useInfiniteQuery<any, any>(
     ["search", searchQuery],
-    ({ pageParam }) =>
+    ({ pageParam }) => 
       searchWords({
         words: wordsArray,
         recordsToTake,
@@ -82,24 +82,6 @@ const Home = (props: any) => {
     }, 0);
   };
 
-  const words = [
-    {
-      word: "abound",
-      sound: "/əˈbaʊnd/",
-      definition: "exist in large numbers or amounts.",
-    },
-    {
-      word: "amorphous",
-      sound: "/əˈmɔːfəs/",
-      definition: "without a clearly defined shape or form.",
-    },
-    {
-      word: "austere",
-      sound: "/ɒˈstɪə,ɔːˈstɪə/",
-      definition: "severe or strict in manner or attitude.",
-    },
-  ];
-
   const handleMultiChange = (value: any) => {
     setValue(_.uniqBy(value, "value"));
   };
@@ -109,13 +91,9 @@ const Home = (props: any) => {
       const optionLength = option.length;
       const inputValueLength = inputValue.length;
 
-      const newInputValue = optionLength < inputValueLength
-          ? option
-          : option;
+      const newInputValue = optionLength < inputValueLength ? option : option;
       setInputValue(newInputValue);
-    } 
-    // else if (action === "input-blur") {
-    // }
+    }
   };
 
   const createOption = (label: string) => ({
@@ -153,16 +131,11 @@ const Home = (props: any) => {
     }
   };
 
-  const breakpoints = [500, 768, 1024];
-
-  const mq = breakpoints.map((bp) => `@media (max-width: ${bp}px)`);
-
-  const breakpointColumnsObj = {
-    default: 2,
-    1100: 2,
-    700: 2,
-    500: 1
-  };
+  useEffect(() => {
+    if (data || error) {
+      setMode("results")
+    }
+  }, [data, error]);
 
   return (
     <Div100vh>
@@ -176,86 +149,21 @@ const Home = (props: any) => {
                 </div>
                 <div className="masthead">
                   <img src={Logo} className="img-fluid" alt="logo" />
-                  <div className="input-pane">
-                    <form
-                      className="input-group mb-3"
-                      onSubmit={onHandleClick}
-                      onPaste={handlePaste}
-                    >
-                      <CreatableSelect
-                        {...props}
-                        isMulti
-                        isClearable
-                        className="multi-input"
-                        placeholder="Type each word and press enter"
-                        maxMenuHeight={0}
-                        menuIsOpen={false}
-                        onChange={handleMultiChange}
-                        inputValue={inputValue}
-                        onInputChange={handleInputChange}
-                        onKeyDown={handleKeyDown}
-                        value={value}
-                        components={{
-                          DropdownIndicator: null,
-                        }}
-                        styles={{
-                          option: (provided, { isFocused }) => {
-                            return {
-                              ...provided,
-                              backgroundColor: isFocused ? "#fff" : "#fff",
-                            };
-                          },
-                          control: (provided, { isFocused }) => {
-                            return {
-                              ...provided,
-                              backgroundColor: isFocused
-                                ? "#f2f2f2"
-                                : "#f2f2f2",
-                              display: "flex",
-                              border: `2px solid ${
-                                isFocused ? "#f2f2f2" : "#222"
-                              }`,
-                              padding: "10px 0px",
-                              borderColor: isFocused ? "#f2f2f2" : "#222",
-                              boxShadow: "none",
-                              borderRight: "none",
-                              borderRadius: "6px 0px 0px 6px",
-                              [mq[0]]: {
-                                borderRadius: "6px 6px 0px 0px",
-                              },
-                            };
-                          },
-                          multiValue: (provided, { isFocused }) => {
-                            return {
-                              ...provided,
-                              backgroundColor: isFocused ? "#222" : "#fff",
-                              color: isFocused ? "#fff" : "#222",
-                            };
-                          },
-                          input: (provided) => {
-                            return {
-                              ...provided,
-                              fontSize: "13px",
-                            };
-                          },
-                        }}
-                      />
-                      <button
-                        onClick={onHandleClick}
-                        className="btn btn-outline-secondary"
-                        type="button"
-                        id="button-addon2"
-                        disabled={isLoading}
-                      >
-                        <i className="lni lni-search"></i> {isLoading ? "Searching..." : "Search"}
-                      </button>
-                    </form>
-                  </div>
+                  <Search
+                    {...{
+                      onHandleClick,
+                      handlePaste,
+                      handleMultiChange,
+                      inputValue,
+                      handleInputChange,
+                      handleKeyDown,
+                      isLoading,
+                      value,
+                    }}
+                  />
                 </div>
                 {isLoading ? (
-                  <div
-                    className="loader"
-                  >
+                  <div className="loader">
                     <div>
                       <Loader />
                       <p>Please wait..</p>
@@ -264,71 +172,18 @@ const Home = (props: any) => {
                 ) : error ? (
                   error?.response?.data?.message || "Oops, an error occured"
                 ) : mode === "results" && data ? (
-                  <div className="words-of-the-day overflow">
-                    <div
-                      className="row"
-                      data-masonry='{"percentPosition": true }'
-                    >
-                      <div className="col-md-12">
-                        <h3>Results ({wordsArray.length})</h3>
-                      </div>
-                    </div>
-                    <Masonry
-                      breakpointCols={breakpointColumnsObj}
-                      className="my-masonry-grid"
-                      columnClassName="my-masonry-grid_column"
-                    >
-                      {data.pages?.map((group, i) => {
-                        return group.data.map((item: any, index: number) => (
-                            <WordItemCard item={item} key={`${i}-${index}`} />
-                        ))
-                      })}
-                    </Masonry>
-                  </div>
-                ) : mode === "wotd" ? (
-                  <div className="words-of-the-day">
-                    <div className="row">
-                      <div className="col-md-12">
-                        <h3>Words of the Day</h3>
-                      </div>
-                    </div>
-                    <div className="row">
-                      {words.map(({ word, sound, definition }, index) => {
-                        return (
-                          <div className="col-md-4">
-                            <div className="words-item">
-                              <h3>{word}</h3>
-                              <p className="sound">{sound} .noun</p>
-
-                              <p>{definition}</p>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
+                  <WordList
+                    {...{
+                      wordsArray,
+                      data,
+                      isFetchingNextPage,
+                      hasNextPage,
+                      fetchNextPage,
+                    }}
+                  />
+                ) : mode === "menu" ? (
+                  <GameList />
                 ) : null}
-
-                <div className="text-center">
-                  {isFetchingNextPage ? (
-                    <button className="btn btn-primary" type="button" disabled>
-                      <span
-                        className="spinner-grow spinner-grow-sm"
-                        role="status"
-                        aria-hidden="true"
-                      ></span>
-                      <span className="visually-hiddens"> Loading...</span>
-                    </button>
-                  ) : hasNextPage ? (
-                    <button
-                      className="btn btn-outline-secondary btn-more"
-                      onClick={() => fetchNextPage()}
-                      disabled={!hasNextPage || isFetchingNextPage}
-                    >
-                      Load More
-                    </button>
-                  ) : null}
-                </div>
               </div>
             </div>
           </div>
